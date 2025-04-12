@@ -43,6 +43,25 @@ Welcome to <strong>Bug Bounty Methodology </strong>! This is a guide to help you
 subfinder -d target.com -silent -all -recursive -o subfinder_subs.txt
 ```
 
+installation guide
+```bash
+sudo apt install golang-go -y
+```
+```bash
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+```
+```bash
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+```bash
+cd v2/cmd/subfinder
+```
+```bash
+go build .
+
+./subfinder -d 
+```
+
 **Amass (Passive Mode)**
 ```bash
 amass enum -passive -d target.com -o amass_passive_subs.txt
