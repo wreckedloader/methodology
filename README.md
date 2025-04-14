@@ -174,6 +174,9 @@ cat all_subs.txt | httpx -silent -title -o live_subdomains.txt
 ```bash
 httpx -l resolved_subs.txt -p 80,443,8080,8443 -silent -title -sc -ip -o live_websites.txt
 ```
+```bash
+cat subs.txt | sort -u | httpx -status-code --no-color -title -tech-detect -o live.txt
+```
 
 **Custom Filtering**
 ```bash
